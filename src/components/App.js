@@ -1,9 +1,9 @@
-import React from "react";
-import {connect} from 'react-redux';
+import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { fetchPosts } from "../actions/posts";
-import {PostsList} from './';
+import { fetchPosts } from '../actions/posts';
+import { PostsList } from './';
 
 class App extends React.Component {
   componentDidMount() {
@@ -11,12 +11,12 @@ class App extends React.Component {
   }
 
   render(){
-    const {posts} = this.props;
-    return (
+    const { posts } = this.props;
+    return(
       <div>
         <nav className="nav">
           <div className="left-div">
-            <img 
+            <img
               src="https://ninjasfiles.s3.amazonaws.com/0000000000003454.png"
               alt="logo"
             />
@@ -27,8 +27,7 @@ class App extends React.Component {
               src="https://image.flaticon.com/icons/svg/483/483356.svg"
               alt="search-icon"
             />
-
-            <input placeholder="Search"/>
+            <input placeholder="Search" />
 
             <div className="search-results">
               <ul>
@@ -67,13 +66,13 @@ class App extends React.Component {
             </div>
           </div>
         </nav>
-        <PostsList posts={posts}/>
+        <PostsList posts={posts} />
       </div>
     );
   }
 }
 
-function mapStateToProps(state){
+function mapStateToProps(state) {
   return {
     posts: state.posts,
   };
