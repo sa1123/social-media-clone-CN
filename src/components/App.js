@@ -10,21 +10,22 @@ class App extends React.Component {
     this.props.dispatch(fetchPosts());
   }
 
-  render(){
+  render() {
     const { posts } = this.props;
-    return(
+    return (
       <div>
         <nav className="nav">
           <div className="left-div">
             <img
-              src="https://ninjasfiles.s3.amazonaws.com/0000000000003454.png"
+              src="https://www.svgrepo.com/show/503858/card-holder.svg"
               alt="logo"
+              style={{maxWidth: '10%'}}
             />
           </div>
           <div className="search-container">
             <img
               className="search-icon"
-              src="https://image.flaticon.com/icons/svg/483/483356.svg"
+              src="https://www.svgrepo.com/show/502828/search.svg"
               alt="search-icon"
             />
             <input placeholder="Search" />
@@ -33,14 +34,14 @@ class App extends React.Component {
               <ul>
                 <li className="search-results-row">
                   <img
-                    src="https://image.flaticon.com/icons/svg/2154/2154651.svg"
+                    src="https://www.svgrepo.com/show/502852/smile.svg"
                     alt="user-dp"
                   />
                   <span>John Doe</span>
                 </li>
                 <li className="search-results-row">
                   <img
-                    src="https://image.flaticon.com/icons/svg/2154/2154651.svg"
+                    src="https://www.svgrepo.com/show/502852/smile.svg"
                     alt="user-dp"
                   />
                   <span>John Doe</span>
@@ -51,7 +52,7 @@ class App extends React.Component {
           <div className="right-nav">
             <div className="user">
               <img
-                src="https://image.flaticon.com/icons/svg/2154/2154651.svg"
+                src="https://www.svgrepo.com/show/502852/smile.svg"
                 alt="user-dp"
                 id="user-dp"
               />
