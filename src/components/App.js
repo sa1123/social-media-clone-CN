@@ -1,9 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { fetchPosts } from '../actions/posts';
-import { PostsList } from './';
+import { Home, Navbar, Page404 } from './';
+
+const Login = () => <div>Login</div>
+const Signup = () => <div>Signup</div>
 
 class App extends React.Component {
   componentDidMount() {
@@ -12,64 +16,26 @@ class App extends React.Component {
 
   render() {
     const { posts } = this.props;
-    return (
-      <div>
-        <nav className="nav">
-          <div className="left-div">
-            <img
-              src="https://www.svgrepo.com/show/503858/card-holder.svg"
-              alt="logo"
-              style={{maxWidth: '10%'}}
-            />
-          </div>
-          <div className="search-container">
-            <img
-              className="search-icon"
-              src="https://www.svgrepo.com/show/502828/search.svg"
-              alt="search-icon"
-            />
-            <input placeholder="Search" />
+      return (
+        <Router>
+          <div>
+            <Navbar/>
 
-            <div className="search-results">
-              <ul>
-                <li className="search-results-row">
-                  <img
-                    src="https://www.svgrepo.com/show/502852/smile.svg"
-                    alt="user-dp"
-                  />
-                  <span>John Doe</span>
-                </li>
-                <li className="search-results-row">
-                  <img
-                    src="https://www.svgrepo.com/show/502852/smile.svg"
-                    alt="user-dp"
-                  />
-                  <span>John Doe</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="right-nav">
-            <div className="user">
-              <img
-                src="https://www.svgrepo.com/show/502852/smile.svg"
-                alt="user-dp"
-                id="user-dp"
+            <Switch>
+              <Route
+                exact
+                path='/'
+                render={(props) => {
+                  return <Home {...props} posts={posts} />;
+                }}
               />
-              <span>John Doe</span>
-            </div>
-            <div className="nav-links">
-              <ul>
-                <li>Log in</li>
-                <li>Log out</li>
-                <li>Register</li>
-              </ul>
-            </div>
+              <Route path='/login' component={Login} />
+              <Route path='/signup' component={Signup} />
+              <Route component={Page404} />
+            </Switch>
           </div>
-        </nav>
-        <PostsList posts={posts} />
-      </div>
-    );
+        </Router>
+      )
   }
 }
 
