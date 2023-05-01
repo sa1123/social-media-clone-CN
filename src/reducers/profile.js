@@ -1,8 +1,4 @@
-import {
-    USER_PROFILE_SUCCESS,
-    USER_PROFILE_FAILURE,
-    FETCH_USER_PROFILE,
-  } from '../actions/actionTypes';
+import { USER_PROFILE_SUCCESS, USER_PROFILE_FAILURE, FETCH_USER_PROFILE } from '../actions/actionTypes';
   
   const initalProfileState = {
     user: {},
@@ -34,4 +30,3 @@ import {
         return state;
     }
   }
-  
