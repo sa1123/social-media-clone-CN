@@ -76,7 +76,7 @@ class App extends React.Component {
 
               <PrivateRoute path='/settings' component={Settings} isLoggedin={auth.isLoggedin}/>
 
-              <PrivateRoute path="/settings" component={Settings} isLoggedin={auth.isLoggedin}/>
+              <PrivateRoute path="/user/:userId" component={UserProfile} isLoggedin={auth.isLoggedin}/>
 
               <Route component={Page404} />
             </Switch>

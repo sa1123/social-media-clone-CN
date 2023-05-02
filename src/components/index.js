@@ -9,5 +9,7 @@ import Settings from './Settings';
 import UserProfile from './UserProfile';
 import FriendList from './FriendsList';
 import FriendListItem from './FriendsListItem';
+import CreatePost from './CreatePost';
+import Comment from './Comment';
 
-export { PostsList, App, Navbar, Home, Page404, Login, Signup, Settings, UserProfile, FriendList, FriendListItem };
+export { PostsList, App, Navbar, Home, Page404, Login, Signup, Settings, UserProfile, FriendList, FriendListItem, CreatePost, Comment };
