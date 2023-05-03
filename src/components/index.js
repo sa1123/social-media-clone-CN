@@ -11,5 +11,6 @@ import FriendList from './FriendsList';
 import FriendListItem from './FriendsListItem';
 import CreatePost from './CreatePost';
 import Comment from './Comment';
+import Post from './Post';
 
-export { PostsList, App, Navbar, Home, Page404, Login, Signup, Settings, UserProfile, FriendList, FriendListItem, CreatePost, Comment };
+export { PostsList, App, Navbar, Home, Page404, Login, Signup, Settings, UserProfile, FriendList, FriendListItem, CreatePost, Comment, Post };

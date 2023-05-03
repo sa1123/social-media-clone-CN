@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Comment({comment}){
-    return{
+    return(
         <div className="post-comment-item">
             <div className="post-comment-header">
                 <span className="post-comment-author">{comment.user.name}</span>
@@ -11,7 +11,7 @@ function Comment({comment}){
         
             <div className="post-comment-content">{comment.content}</div>
         </div>
-    }
+    )
 }
 
 export default Comment;
